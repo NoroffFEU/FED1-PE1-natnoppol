@@ -1,20 +1,18 @@
 
 document
-.getElementById("registrationForm")
+.getElementById("loginForm")
 .addEventListener("submit", async function (event) {
   event.preventDefault();
   
-  const regisName= document.getElementById("name").value;
   const regisEmail = document.getElementById("email").value;
   const regisPassword = document.getElementById("password").value;
   
   const regisData = {
-    name: regisName,
     email: regisEmail,
     password: regisPassword,
   };
   try {
-      const response = await fetch("https://v2.api.noroff.dev/auth/register", {
+      const response = await fetch("https://v2.api.noroff.dev/auth/login", {
         method: 'POST',
       body: JSON.stringify(regisData),
       headers: {
@@ -33,6 +31,4 @@ document
     }
     console.log(regisData)
   });
-
-
 
