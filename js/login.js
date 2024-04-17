@@ -3,6 +3,9 @@ document
   .addEventListener("submit", async function (event) {
     event.preventDefault();
 
+    //4. redirect to index page, if HTTP 200
+    window.location.href = '../post/edit.html'
+
     const regisEmail = document.getElementById("email").value;
     const regisPassword = document.getElementById("password").value;
     const regisData = {
@@ -10,7 +13,9 @@ document
       password: regisPassword,
     };
 
-    let result;
+ 
+    let result; // 2.Response from server
+    
     try {
       const loginResponse = await fetch("https://v2.api.noroff.dev/auth/login", {
         method: "POST",
@@ -23,12 +28,12 @@ document
       if (loginResponse.ok) {
         result = await loginResponse.json();
         console.log(result)
-      } else {
-        console.error(2, loginResponse.statusText);
-      }
+      } 
     } catch (error) {
       console.error("there was an errror with your fetch", error);
     }
-    
+
+    // 3.Store accessTOken in LocalStorage 
+    localStorage.setItem('accessToken', result.data["accessToken"])
   
   });

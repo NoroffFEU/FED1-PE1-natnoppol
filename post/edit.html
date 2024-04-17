@@ -6,34 +6,17 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="editor-page">
-        <div class="container page">
-            <div class="row">
-                <div class="col-md-10 offset-md-1 col-xs-12">
-                    <!-- <ul class="error-messages">
-                        <li>That title is required</li>
-                    </ul> -->
-
-                    <form>
-                        <fieldset>
-                            <fieldset class="form-group">
-                                <input type="text" class="form-control form-control-lg" placeholder="Article Title" name="title" id="title"/>
-                            </fieldset>
-
-                            <fieldset class="form-group">
-                                <textarea class="form-control" rows="8"
-                                    placeholder="Write your article (in markdown)" id="body" name="body"></textarea>
-                            </fieldset>
-
-                            <button class="btn btn-lg pull-xs-right btn-primary" type="submit">
-                                Publish Article
-                            </button>
-                        </fieldset>
-                    </form>
-                </div>
-            </div>
+   <form id="createPostForm">
+        <div class="title">
+            <label for="text" >Title</label>
+            <input id="title" type="text" for="title" required>
         </div>
-    </div>
-      
+        <div class="textbox">
+            <textarea name="text" for="title" id="body" cols="30" rows="10" style="height: 300px; width: 300px;" required></textarea>
+            <button type="submit">submit</button>
+        </div>
+   </form>
+
+      <script src="../js/createPost.js"></script>
 </body>
 </html>

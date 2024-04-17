@@ -1,4 +1,4 @@
-
+// 1 create name email password and POST request
 document
 .getElementById("registrationForm")
 .addEventListener("submit", async function (event) {
