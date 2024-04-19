@@ -1,35 +1,40 @@
 
 //when we use TOken ? 
-// Get accessToken 
-/*  check if token is correct to create post.
+
+// 6. Get accessToken 
+/* 7. check if accesstoken is correct to create post.
 if True get accessToken
 */
-//  Let user create form 
+//  8. Let user create post to main index.html
 const token = localStorage.getItem('accessToken');
 const submitForm = document.getElementById('createPostForm').addEventListener('submit', async function(e){
 e.preventDefault()
 
 
-const postTitle = document.getElementById('title').value
-const postContent = document.getElementById('body').value
+const inputTitle = document.getElementById('title').value
+const inputContent = document.getElementById('body').value
+// const inputImageURL = document.getElementById('mediaURL').value
+
+
 const createPost = {
-    title: postTitle,
-    body: postContent
+    title: inputTitle,
+    body: inputContent
 }
 
-// 5. POST request submit to server 
+// 5. GET request submit to server 
 try{
-    const response = await fetch('https://v2.api.noroff.dev/blog/posts/natnoppol',{
-        medthod: "POST",
+    const response = await fetch('https://v2.api.noroff.dev/blog/posts/Natnoppol',{
+        method: "POST",
         headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`
         },
         body: JSON.stringify(createPost)
     })
     
     if(response.ok){
         alert('Your content is postet')
-        window.location.href = "../post/index.html"
+        window.location.href = "../index.html"
     } else {
         alert('Your post is not createt')
     }

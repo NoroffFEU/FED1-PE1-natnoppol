@@ -3,8 +3,7 @@ document
   .addEventListener("submit", async function (event) {
     event.preventDefault();
 
-    //4. redirect to index page, if HTTP 200
-    window.location.href = '../post/edit.html'
+
 
     const regisEmail = document.getElementById("email").value;
     const regisPassword = document.getElementById("password").value;
@@ -28,6 +27,8 @@ document
       if (loginResponse.ok) {
         result = await loginResponse.json();
         console.log(result)
+        //4. redirect to index page, if HTTP 200
+        window.location.href = '../post/index.html'
       } 
     } catch (error) {
       console.error("there was an errror with your fetch", error);

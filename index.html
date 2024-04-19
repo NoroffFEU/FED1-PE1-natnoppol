@@ -4,8 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <script type="module" src="./js/courasel.mjs"></script>
+    <script type="module" src="./js/fetchAllPost.mjs"></script>
 </head>
 <body>
-    <script src="./js/test.js"></script>
+    <header>
+        <nav>
+          <ul>
+            <li>
+              <a href="/index.html">Home</a>
+              <a href="./post/edit.html">Write your title!</a>
+              <a href="./post/index.html">Posts</a>
+              <a href="./account/login.html">Log in</a>
+              <a href="./account/register.html">Register</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section>
+            <h1 style="display: flex; justify-content: center;">Gallary</h1>
+            <div class="image-slider" style="display: flex; justify-content: center;">
+                <div class="js-slider" style="width: auto; height: auto;">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                </div>
+            </div>
+        </section>
+        <article>
+          <header>
+            <div class="title" id="blogPost">
+            </div>
+          </header>
+        </article>
+      </main>
 </body>
 </html>
