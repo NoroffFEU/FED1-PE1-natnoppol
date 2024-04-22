@@ -1,39 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="../index.html">Home</a>
-                    <a href="/post/edit.html">Write your title!</a>
-                     <a href="/post/index.html">Posts</a>
-                      <a href="../account/login.html">Log in</a>
-                     <a href="../account/register.html">Register</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-   <form id="createPostForm">
-        <div class="title">
-            <label for="text" >Title</label>
-            <input id="title" type="text" for="title" required>
-        </div>
-        <div class="media-url">
-            <label for="URL" >Your URL</label>
-            <input id="mediaURL" type="url" for="url" placeholder="Your URL">
-        </div>
-        <div class="textbox">
-            <textarea name="text" for="title" id="body" cols="30" rows="10" style="height: 300px; width: 300px;" required></textarea>
-            <button type="submit">submit</button>
-        </div>
-   </form>
 
-      <script src="../js/createPost.js"></script>
-</body>
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="../index.html">Home</a>
+            <a href="/post/edit.html">Edit</a>
+            <a href="/post/index.html">Posts</a>
+            <a href="../account/login.html">Log in</a>
+            <a href="../account/register.html">Register</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <form id="createPostForm">
+      <div class="form-card">
+        <label for="text">Title</label>
+        <input id="title" type="text" for="title" required />
+      </div>
+      <div class="form-card">
+        <label for="URL">Your URL</label>
+        <input id="mediaURL" type="url" for="url" placeholder="Your URL" />
+      </div>
+      <div class="form-card">
+        <textarea class="scroll"
+          name="text"
+          for="title"
+          id="body"
+          cols="30"
+          rows="10"
+          style="height: 100px;"
+          placeholder="Type your text"
+          required
+        ></textarea>
+      </div>
+      <button type="submit">submit</button>
+    </form>
+
+    <script src="../js/createPost.js"></script>
+  </body>
 </html>
