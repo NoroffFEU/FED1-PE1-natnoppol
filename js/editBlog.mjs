@@ -9,13 +9,12 @@ window.addEventListener('load', async (e) =>{
     id = params.get("id");
 
     const {title, body} = await getPost(id)
-    console.log(body)
 
     const inputTitleEl = document.getElementById('title')
-    const inputTitleEl = document.getElementById('title')
-    console.log (inputTitleEl)
+    const inputBody = document.getElementById('body')
+  
     inputTitleEl.value = title
-    inputTitleEl.value = title
+    inputBody.value = body
     
 
 })
@@ -30,11 +29,11 @@ document.getElementById('editPostForm').addEventListener('submit', async (e) =>{
         title: editTitle,
         body: editContent
     }
-    console.log(newBlog)
+    
 
     async function editSingleBlog (){
         try{
-            const res = await fetch (`https://v2.api.noroff.dev/blog/posts/Natnoppol/${id}`,{
+            const res = await fetch (`https://v2.api.noroff.dev/blog/posts/${localStorage.getItem('name')}/${id}`,{
                 method: "PUT",
                 headers:{
                     "Content-type": "application/json",

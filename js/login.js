@@ -3,8 +3,6 @@ document
   .addEventListener("submit", async function (event) {
     event.preventDefault();
 
-
-
     const regisEmail = document.getElementById("email").value;
     const regisPassword = document.getElementById("password").value;
     const regisData = {
@@ -26,7 +24,7 @@ document
 
       if (loginResponse.ok) {
         result = await loginResponse.json();
-        console.log(result)
+
         //4. redirect to index page, if HTTP 200
         window.location.href = '../post/index.html'
       } 
@@ -36,5 +34,6 @@ document
 
     // 3.Store accessTOken in LocalStorage 
     localStorage.setItem('accessToken', result.data["accessToken"])
-  
+    localStorage.setItem('name', result.data["name"])
+    
   });

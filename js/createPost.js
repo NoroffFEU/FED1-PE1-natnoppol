@@ -23,7 +23,7 @@ const submitForm = document
     // 5. POST request submit to server
     try {
       const response = await fetch(
-        "https://v2.api.noroff.dev/blog/posts/Natnoppol",
+        `https://v2.api.noroff.dev/blog/posts/${localStorage.getItem('name')}`,
         {
           method: "POST",
           headers: {

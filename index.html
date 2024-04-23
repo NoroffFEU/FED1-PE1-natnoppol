@@ -7,10 +7,7 @@
 
     <script type="module" src="./js/courasel.mjs"></script>
     <script type="module" src="./js/fetchAllPost.mjs"></script>
-    
-    <script src="./js/libs.js"></script>
-
-    
+    <script src="./js/libs.js" defer></script>
 
     <link rel="stylesheet" href="/index.css">
 </head>
@@ -29,9 +26,15 @@
         </nav>
       </header>
       <main>
-        <div class="searchByAuther">
-          <input type="text" id="search" name="search" placeholder="Input your Auther here!">
-        </div>
+          <form action="search" id="searchForm">
+            <div class="">
+              <label for="search">Search</label>
+              <input type="text" id="search" name="search" onkeyup="getSearchInput()" placeholder="Input your Auther here!">
+            </div>
+            <button type="submit">Search</button>
+          </form>
+
+
         <section>
             <h1 style="display: flex; justify-content: center;">Blog Posts</h1>
             <div class="image-slider" style="display: flex; justify-content: center;">

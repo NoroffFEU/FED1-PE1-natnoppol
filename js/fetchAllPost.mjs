@@ -1,7 +1,7 @@
 async function fetchAllPost() {
   try {
     const response = await fetch(
-      "https://v2.api.noroff.dev/blog/posts/Natnoppol",
+      `https://v2.api.noroff.dev/blog/posts/${localStorage.getItem('name')}`,
       {
         method: "GET",
         headers: {
