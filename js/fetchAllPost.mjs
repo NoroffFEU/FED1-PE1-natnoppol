@@ -32,7 +32,7 @@ async function loadPosts() {
               <button>
                 <a href="../post/edit.html?id=${e.id}">Edit</a>
               </button>
-              <button>Delete</button>
+              <button onclick="deletePost('${e.id}')">Delete</button>
             </div>`
       );
       post.innerHTML = element.join("");
@@ -43,3 +43,5 @@ async function loadPosts() {
 }
 
 window.addEventListener("DOMContentLoaded", loadPosts);
+
+

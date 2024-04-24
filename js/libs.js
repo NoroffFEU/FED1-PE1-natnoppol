@@ -22,4 +22,25 @@ async function getPost(id) {
     }
 }
 
+async function deletePost(id){
+    try{
+        const res = await fetch(`https://v2.api.noroff.dev/blog/posts/${localStorage.getItem(
+            "name"
+        )}/${id}`,{
+            method: "DELETE",
+            headers:{
+                "Content-type": "application/json",
+                Authorization: `Bearer ${localStorage.getItem('accessToken')}`
+            }
+        })
+        if(res.ok){
+            alert("Your selected post is deletet")
+            window.location.reload()
+        }
+    }catch(error){
+        console.log("Something went wrong", error)
+    }
+}
+
+
 
