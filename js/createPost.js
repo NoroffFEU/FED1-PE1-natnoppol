@@ -14,10 +14,16 @@ const submitForm = document
 
     const inputTitle = document.getElementById("title").value;
     const inputContent = document.getElementById("body").value;
+    const inputURL = document.getElementById("mediaURL").value;
 
+    console.log(inputURL)
+    
     const createPost = {
       title: inputTitle,
       body: inputContent,
+      media: {
+        url: inputURL
+      }
     };
 
     // 5. POST request submit to server

@@ -11,6 +11,7 @@ async function fetchAllPost() {
     );
     if (response.ok) {
       const data = await response.json();
+      console.log(data)
       return data;
     }
   } catch (error) {
@@ -27,6 +28,7 @@ async function loadPosts() {
         (e) =>
           `<div class="blog">
               <h1>${e.title}</h1>
+              <img src="${e.media?.url}">
               <h3>${e.body}</h3>
               <button>Read More</button>
               <button>
