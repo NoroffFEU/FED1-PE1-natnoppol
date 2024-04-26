@@ -17,10 +17,15 @@ ul{
 img {
     max-width: 100%;
     height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
 }
 
 nav {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
 }
 
 nav ul li {
@@ -35,6 +40,7 @@ nav ul li a {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin: 5rem;
 }
 .blog{
     height: 100%;
@@ -43,6 +49,30 @@ nav ul li a {
     background-color: #3d3d3d;
     border: 1px solid #fff;
     border-radius: 5px;
+    cursor: pointer;
+}
+.blog-body{
+    padding: 1rem;
+}
+.blog-btn{
+    display: flex;
+    gap: 1rem;
+}
+.logout-btn{
+    background-color: #ff1201;
+}
+.logout-btn:hover {
+    background-color: #970a00;
+}
+button {
+    padding: 0.5rem;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
 }
 
 input,
@@ -54,7 +84,7 @@ textarea {
   box-sizing: border-box;
 }
 
-#editPostForm, #createPostForm{
+#postForm, #createPostForm{
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
@@ -63,18 +93,6 @@ textarea {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-button:hover {
-    background-color: #0056b3;
-  }
-
 .form-card{
     margin-bottom: 20px;
 }
@@ -82,18 +100,47 @@ button:hover {
     overflow: scroll;
     overflow-x: hidden;
 }
+.clamped-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    opacity: 0.8;
+  }
+.date-text{
+    opacity: 0.5;
+}
+.banner-con{
+    display: flex;
+    gap: 1rem;
+}
+.author-banner{
+    display: flex;
+    align-items: center;
+}
+.author-banner img{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    object-fit: fill;
+}
 
 
 @media screen and (max-width: 768px){
     .blog{
-        max-width: calc(100vw - 2rem);
         margin:1rem auto
+    }
+    .clamped-text {
+        -webkit-line-clamp: 1; 
     }
 }
 
 @media screen and (max-width: 480px){
     .blog{
-        max-width: calc(100vw - 2rem);
         margin: 1rem auto;
+    }
+    .clamped-text {
+        -webkit-line-clamp: 1; 
     }
 }

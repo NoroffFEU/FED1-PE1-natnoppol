@@ -26,7 +26,7 @@ document
         result = await loginResponse.json();
 
         //4. redirect to index page, if HTTP 200
-        window.location.href = '../post/index.html'
+        window.location.href = '../post/edit.html'
       } 
     } catch (error) {
       console.error("there was an errror with your fetch", error);

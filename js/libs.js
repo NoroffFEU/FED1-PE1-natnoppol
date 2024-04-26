@@ -13,7 +13,6 @@ async function getPost(id) {
         );
         if (res) {
             const { data } = await res.json();
-            console.log(data)
             return data;
         }
     } catch (error) {
@@ -40,6 +39,19 @@ async function deletePost(id){
     }catch(error){
         console.log("Something went wrong", error)
     }
+}
+
+function formatDate(date){
+    return new Date(date).toLocaleDateString('en-US',{
+        day:'numeric',
+        month:'short',
+        year:'numeric'
+    });
+}
+
+function logout(){
+    localStorage.clear()
+    window.location.reload()
 }
 
 

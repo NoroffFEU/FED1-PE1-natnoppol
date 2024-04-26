@@ -1,7 +1,7 @@
 async function fetchAllPost() {
   try {
     const response = await fetch(
-      `https://v2.api.noroff.dev/blog/posts/${localStorage.getItem('name')}`,
+      `https://v2.api.noroff.dev/blog/posts/${localStorage.getItem("name")||"test123123"}`,
       {
         method: "GET",
         headers: {
@@ -11,7 +11,7 @@ async function fetchAllPost() {
     );
     if (response.ok) {
       const data = await response.json();
-      console.log(data)
+      console.log(data);
       return data;
     }
   } catch (error) {
@@ -26,16 +26,28 @@ async function loadPosts() {
     if (res.data.length > 0) {
       const element = res.data.map(
         (e) =>
-          `<div class="blog">
-              <h1>${e.title}</h1>
+          `
+          
+            <div onclick="location.href ='../post/index.html' "class="blog">
               <img src="${e.media?.url}">
-              <h3>${e.body}</h3>
-              <button>Read More</button>
-              <button>
-                <a href="../post/edit.html?id=${e.id}">Edit</a>
-              </button>
-              <button onclick="deletePost('${e.id}')">Delete</button>
-            </div>`
+              <div class="blog-body">
+                <div class="banner-con">
+                  <div class="author-banner">
+                    <img src="${e.author?.banner.url}">
+                  </div>
+                  <p>${e.author.name}</p>
+                </div>
+                <h1>${e.title}</h1>
+                <p class="clamped-text">${e.body}</p>
+                <p class="date-text">${formatDate(e.created)}</p>
+                <div class="blog-btn">
+                  ${localStorage.getItem('accessToken') ? `<button><a href="../post/edit.html?id=${e.id}">Edit</a></button>` :'' }
+                  ${localStorage.getItem('accessToken') ? `<button onclick="deletePost('${e.id}')">Delete</button>` :'' }
+                </div>
+              </div>
+            </div>
+            
+            `
       );
       post.innerHTML = element.join("");
     }
@@ -45,5 +57,3 @@ async function loadPosts() {
 }
 
 window.addEventListener("DOMContentLoaded", loadPosts);
-
-
