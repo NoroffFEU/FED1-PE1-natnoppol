@@ -9,7 +9,11 @@ body {
     line-height: 1.5;
     font-family: Arial, sans-serif;
 }
-  
+
+a{
+    text-decoration: none;
+    color: #fff;
+}  
 ul{
     list-style: none;
 }
@@ -33,7 +37,6 @@ nav ul li {
 }
 nav ul li a {
     padding: 1rem;
-    color: #fff;
     text-decoration: none;
 }
 .blog-con{
@@ -49,7 +52,6 @@ nav ul li a {
     background-color: #3d3d3d;
     border: 1px solid #fff;
     border-radius: 5px;
-    cursor: pointer;
 }
 .blog-body{
     padding: 1rem;

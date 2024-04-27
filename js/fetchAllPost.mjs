@@ -23,13 +23,13 @@ async function loadPosts() {
     const post = document.getElementById("blogPost");
     const res = await fetchAllPost();
 
+    // show button if accessToken is true 
     if (res.data.length > 0) {
       const element = res.data.map(
         (e) =>
           `
-          
-            <div onclick="location.href ='../post/index.html' "class="blog">
-              <img src="${e.media?.url}">
+            <div class="blog">
+              <img onclick="window.location.href='../post/index.html'" src="${e.media?.url || '../image/600x400.svg'}" style="cursor: pointer;">
               <div class="blog-body">
                 <div class="banner-con">
                   <div class="author-banner">
@@ -41,12 +41,12 @@ async function loadPosts() {
                 <p class="clamped-text">${e.body}</p>
                 <p class="date-text">${formatDate(e.created)}</p>
                 <div class="blog-btn">
-                  ${localStorage.getItem('accessToken') ? `<button><a href="../post/edit.html?id=${e.id}">Edit</a></button>` :'' }
-                  ${localStorage.getItem('accessToken') ? `<button onclick="deletePost('${e.id}')">Delete</button>` :'' }
+                  ${localStorage.getItem('accessToken') ? `<button><a href="../post/edit.html?id=${e.id}">Edit</a></button> 
+                  <button onclick="deletePost('${e.id}')">Delete</button>` :'' }
                 </div>
               </div>
             </div>
-            
+  
             `
       );
       post.innerHTML = element.join("");
