@@ -1,80 +1,81 @@
-
-*, *::before, *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-  
+
 body {
-    line-height: 1.5;
-    font-family: Arial, sans-serif;
+  line-height: 1.5;
+  font-family: Arial, sans-serif;
 }
 
-a{
-    text-decoration: none;
-    color: #fff;
-}  
-ul{
-    list-style: none;
+a {
+  text-decoration: none;
+  color: #fff;
 }
-  
+ul {
+  list-style: none;
+}
+
 img {
-    max-width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
 }
 
 nav ul li {
-    margin-right:  1rem;
+  margin-right: 1rem;
 }
 nav ul li a {
-    padding: 1rem;
-    text-decoration: none;
+  padding: 1rem;
+  text-decoration: none;
 }
-.blog-con{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 5rem;
+.blog-con {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 5rem;
 }
-.blog{
-    height: 100%;
-    width: 300px;
-    margin: 1rem;
-    background-color: #3d3d3d;
-    border: 1px solid #fff;
-    border-radius: 5px;
+.blog {
+  height: 100%;
+  width: 300px;
+  margin: 1rem;
+  background-color: #3d3d3d;
+  border: 1px solid #fff;
+  border-radius: 5px;
 }
-.blog-body{
-    padding: 1rem;
+.blog-body {
+  padding: 1rem;
 }
-.blog-btn{
-    display: flex;
-    gap: 1rem;
+.blog-btn {
+  display: flex;
+  gap: 1rem;
 }
-.logout-btn{
-    background-color: #ff1201;
+.logout-btn {
+  background-color: #ff1201;
 }
 .logout-btn:hover {
-    background-color: #970a00;
+  background-color: #970a00;
 }
 button {
-    padding: 0.5rem;
-    background-color: #007bff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  padding: 0.5rem;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 input,
@@ -86,63 +87,67 @@ textarea {
   box-sizing: border-box;
 }
 
-#postForm, #createPostForm{
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #585858;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+#postForm,
+#createPostForm {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #585858;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.form-card{
-    margin-bottom: 20px;
+.form-card {
+  margin-bottom: 20px;
 }
-.scroll{
-    overflow: scroll;
-    overflow-x: hidden;
+.scroll {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.overflow-con {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .clamped-text {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    -webkit-line-clamp: 1;
-    opacity: 0.8;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  opacity: 0.8;
+}
+.date-text {
+  opacity: 0.5;
+}
+.banner-con {
+  display: flex;
+  gap: 1rem;
+}
+.author-banner {
+  display: flex;
+  align-items: center;
+}
+.author-banner img {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  object-fit: fill;
+}
+
+@media screen and (max-width: 768px) {
+  .blog {
+    margin: 1rem auto;
   }
-.date-text{
-    opacity: 0.5;
-}
-.banner-con{
-    display: flex;
-    gap: 1rem;
-}
-.author-banner{
-    display: flex;
-    align-items: center;
-}
-.author-banner img{
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    display: inline-block;
-    object-fit: fill;
+  .clamped-text {
+    -webkit-line-clamp: 1;
+  }
 }
 
-
-@media screen and (max-width: 768px){
-    .blog{
-        margin:1rem auto
-    }
-    .clamped-text {
-        -webkit-line-clamp: 1; 
-    }
-}
-
-@media screen and (max-width: 480px){
-    .blog{
-        margin: 1rem auto;
-    }
-    .clamped-text {
-        -webkit-line-clamp: 1; 
-    }
+@media screen and (max-width: 480px) {
+  .blog {
+    margin: 1rem auto;
+  }
+  .clamped-text {
+    -webkit-line-clamp: 1;
+  }
 }
