@@ -13,7 +13,6 @@ async function fetchAllPost() {
     );
     if (response.ok) {
       const data = await response.json();
-      console.log(data);
       return data;
     }
   } catch (error) {
@@ -24,14 +23,14 @@ async function loadPosts() {
   try {
     const post = document.getElementById("blogPost");
     const res = await fetchAllPost();
-
+    console.log(res)
     // show button if accessToken is true
     if (res.data.length > 0) {
       const element = res.data.map(
         (e) =>
           `
             <div class="blog">
-              <img src="${e.media?.url || "../image/600x400.svg"}">
+              <img src="${e.media?.url || '../image/600x400.svg'}">
               <div class="blog-body">
                 <div class="banner-con">
                   <div class="author-banner">
