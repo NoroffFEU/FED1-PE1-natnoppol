@@ -5,12 +5,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   line-height: 1.5;
   font-family: Arial, sans-serif;
 }
-
 a {
   text-decoration: none;
   color: #fff;
@@ -18,23 +16,18 @@ a {
 ul {
   list-style: none;
 }
-
 img {
   width: 100%;
-  max-width: 95rem;
-  max-height: 40rem;
-  height: auto;
+  height: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
 }
-
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 1rem;
 }
-
 nav ul li {
   margin-right: 1rem;
 }
@@ -59,6 +52,9 @@ nav ul li a {
 .blog-body {
   padding: 1rem;
 }
+.blog-body-read-more{
+  padding: 1rem;
+}
 .blog-btn {
   display: flex;
   gap: 1rem;
@@ -79,7 +75,6 @@ button {
 button:hover {
   background-color: #0056b3;
 }
-
 input,
 textarea {
   width: 100%;
@@ -88,7 +83,6 @@ textarea {
   border-radius: 4px;
   box-sizing: border-box;
 }
-
 #postForm,
 #createPostForm {
   max-width: 600px;
@@ -98,7 +92,6 @@ textarea {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 .form-card {
   margin-bottom: 20px;
 }
@@ -137,9 +130,10 @@ textarea {
 }
 
 /* Post/index */
+
 .read-more-blog {
   height: auto;
-  width: 1500px;
+  max-width: 90rem;
   margin: 1rem;
   background-color: #3d3d3d;
   border: 1px solid #fff;
@@ -161,15 +155,16 @@ textarea {
     -webkit-line-clamp: 1;
   }
   /* Post/index */
-  img {
-    max-height: 20rem;
+  .read-more-blog{
+    height: auto;
+    width: 45rem;
+  }
+  .blog-body-read-more {
+    word-wrap: break-word;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .blog-con {
-    margin: 0.5rem;
-  }
   .blog {
     width: 400px;
     margin: 0.5rem auto;
@@ -177,10 +172,13 @@ textarea {
   .clamped-text {
     -webkit-line-clamp: 1;
   }
-
   /* Post/index */
-  img {
-    max-height: 10rem;
+  .read-more-blog{
+    height: auto;
+    width: 23rem;
+  }
+  .blog-body-read-more {
+    word-wrap: break-word;
   }
 }
 
