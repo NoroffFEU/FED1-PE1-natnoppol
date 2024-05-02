@@ -2,9 +2,9 @@ let id;
 
 window.addEventListener("DOMContentLoaded", async () => {
   const params = new URLSearchParams(window.location.search);
-
+  
   id = params.get("id");
-
+  
   async function fetchSinglePost(id) {
     try {
       const res = await fetch(
@@ -18,33 +18,35 @@ window.addEventListener("DOMContentLoaded", async () => {
           },
         }
       );
-
+      
       if (res.ok) {
         const response = await res.json();
-        console.log(response);
-
+        
         const blog = document.getElementById("getSinglePost");
-
-        blog.innerHTML = 
-        `
+        
+        blog.innerHTML = `
         <div class ="read-more-blog">
-          <div class="read-more-con-img">
-            <img src="${response.data.media?.url || "../image/600x400.svg"}">
-          </div>
-          <div class="blog-body-read-more">
-            <div class="banner-con">
-              <div class="author-banner">
-                <img src="${response.data.author?.banner.url}">
-              </div>
-              <p>${response.data.author.name}</p>
-            </div>
-              <h1>${response.data.title}</h1>
-              <br>
-              <p>${response.data.body}</p>
-              <br>
-              <p>${response.data.author.email}</p>
-              <p>${formatDate(response.data.updated)}</p>
-          </div>
+        <div class="read-more-con-img">
+        <img src="${response.data.media?.url || "../image/600x400.svg"}">
+        </div>
+        <div class="blog-body-read-more">
+        <div class="banner-con">
+        <div class="author-banner">
+        <img src="${response.data.author?.banner.url}">
+        </div>
+        <p>${response.data.author.name}</p>
+        </div>
+        <h1>${response.data.title}</h1>
+        <br>
+        <p>${response.data.body}</p>
+        <br>
+        <p>${response.data.author.email}</p>
+        <p>${formatDate(response.data.updated)}</p>
+        <br>
+        <div class="blog-btn">
+        <button id='getURL'>Share link</button>
+        </div>
+        </div>
         </div>  
         `;
       }
@@ -52,6 +54,17 @@ window.addEventListener("DOMContentLoaded", async () => {
       console.log("something error", error);
     }
   }
-
+  
   await fetchSinglePost(id);
+  
+  document.querySelector("#getURL").onclick = shareURL
+  
+  function shareURL() {
+    const currentURL = `${window.location.origin}${window.location.pathname}?id=${id}`;
+    
+    navigator.clipboard.writeText(currentURL)
+
+    alert("Copied the text: "+ currentURL)
+    
+  }
 });
