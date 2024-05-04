@@ -107,6 +107,4 @@ function logout() {
   window.location.href='../index.html';
 }
 
-function sharePost(id) {
-    
-}
+

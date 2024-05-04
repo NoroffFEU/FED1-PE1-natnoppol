@@ -1,9 +1,14 @@
-async function fetchAllPost() {
+async function fetchAllPost(limit=null) {
   try {
-    const response = await fetch(
-      `https://v2.api.noroff.dev/blog/posts/${
-        localStorage.getItem("name") || "test123123"
-      }`,
+    let url = `https://v2.api.noroff.dev/blog/posts/${
+      localStorage.getItem("name") || "test123123"
+    }`;
+
+    if(limit !== null){
+      url += `?limit=${limit}`
+    }
+
+    const response = await fetch(url,
       {
         method: "GET",
         headers: {
@@ -11,6 +16,7 @@ async function fetchAllPost() {
         },
       }
     );
+
     if (response.ok) {
       const data = await response.json();
       return data;
@@ -19,12 +25,14 @@ async function fetchAllPost() {
     console.log("Something went wrong", error);
   }
 }
+
+export {fetchAllPost}
+
 async function loadPosts() {
   try {
     const post = document.getElementById("blogPost");
     const res = await fetchAllPost();
-    console.log(res)
-    // show button if accessToken is true
+    
     if (res.data.length > 0) {
       const element = res.data.map(
         (e) =>

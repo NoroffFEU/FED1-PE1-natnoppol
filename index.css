@@ -35,6 +35,19 @@ nav ul li a {
   padding: 1rem;
   text-decoration: none;
 }
+
+/* Carousel Images sliders*/
+.js-carousel{
+  display: flex; 
+  flex-direction: row;
+  justify-content: center;
+}
+.image-slider img{
+  max-height: auto;
+  max-width: 10rem;
+
+}
+
 .blog-con {
   display: flex;
   flex-wrap: wrap;
