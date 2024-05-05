@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <script type="module" src="./js/carousel.mjs"></script>
-    
     <script type="module" src="./js/fetchAllPost.mjs"></script>
     <script src="./js/libs.js" defer></script>
+    <script type="module" src="./js/carousel.mjs" defer></script>
     
     <link rel="stylesheet" href="/index.css">
 </head>
@@ -39,10 +38,17 @@
 
 
         <section>
-            <div class="js-carousel">
-                <button class="arrow-button js-left-arrow" title="previous image" aria-label="previous" onclick="buttonOfCarousel(-1)"> &#10094; </button>
+            <div class="carousel-con">
+                <button class="prev-btn" id="btnPrev" title="previous image" aria-label="previous"> &#10094; </button>
+
                 <div class="image-slider" id="imageCarousel"></div>
-                <button class="arrow-button js-right-arrow" title="next image" aria-label="next" onclick="buttonOfCarousel(1)">&#10095;</button>
+
+                <button class="next-btn" id="btnNext"  title="next image" aria-label="next" >&#10095;</button>
+            </div>
+            <div style="text-align:center">
+              <span class="dot" id="btnDots"></span>
+              <span class="dot" ></span>
+              <span class="dot" ></span>
             </div>
         </section>
         <article>
