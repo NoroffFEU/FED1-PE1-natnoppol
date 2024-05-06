@@ -7,6 +7,7 @@ window.addEventListener('load', async() =>{
     try{
         
         const res = await fetchAllPost(3)
+        console.log(res)
         
         if(res.data.length > 0){
 
@@ -14,9 +15,15 @@ window.addEventListener('load', async() =>{
             const element = res.data.map((e, index) =>
                 `
                 <div class="mySlides">
-                    <div class="">${index + 1}/${res.data.length}</div>
-                    <img src="${e.media?.url || '../image/600x400.svg'}"></img>
+                    <div class="numbertext">${index + 1}/${res.data.length}</div>
+                    <div class="carousel-body">
+                    <p>${e.author.name}</p>
+                    <h1 class="overflow-con">${e.title}</h1>
+                    <p class="clamped-text">${e.body}</p>
+                    </div>
+                    <img src="${e.media?.url || '../image/600x400.svg'}" style='filter: blur(5px);'></img>
                 </div>
+
                 `
             )
             images.innerHTML = element.join("")

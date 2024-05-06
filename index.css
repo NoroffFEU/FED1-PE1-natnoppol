@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   line-height: 1.5;
   font-family: Arial, sans-serif;
@@ -39,21 +40,70 @@ nav ul li a {
 /* Carousel Images sliders*/
 .carousel-con{
   display: flex; 
-  flex-direction: row;
+  position: relative;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  margin: auto;
+  max-width: 1500px;
+}
+.image-slider{
+  width: 100%;
 }
 .image-slider img{
   max-height: auto;
-  max-width: 10rem;
+  max-width: 100%;
+  opacity: 0.2;
 }
 .mySlides {
   display: none;
 }
+.numbertext{
+  font-size: 1rem;
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+}
+.carousel-body{
+  max-height: 10rem;
+  max-width: 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 50%;
+}
+.prev-btn, .next-btn{
+  margin: 0;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  top: auto;
+  width: auto;
+  position: absolute;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 50%;
+  user-select: none;
+}
+.next-btn{
+  right: 3rem;
+}
+.prev-btn{
+  left: 3rem;
+}
+.dot-con{
+  position: absolute;
+  bottom: 1rem;
+}
 .dot {
   cursor: pointer;
+  bottom: 5%;
   height: 15px;
   width: 15px;
-  margin: 0 2px;
+  margin: auto;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
@@ -63,6 +113,7 @@ nav ul li a {
   background-color: #717171;
 }
 
+/* ------------------------- */
 .blog-con {
   display: flex;
   flex-wrap: wrap;
@@ -207,6 +258,24 @@ textarea {
   }
   .blog-body-read-more {
     word-wrap: break-word;
+  }
+  /* Carousel Images sliders*/
+  .next-btn{
+    right: 2rem;
+  }
+  .prev-btn{
+    left: 2rem;
+  }
+  .dot-con{
+    bottom: 2rem;
+  }
+  .prev-btn, .next-btn{
+    top: auto;
+    padding: 0.5rem;
+  }
+  .carousel-body{
+    height: auto;
+    width: 9rem;
   }
 }
 
