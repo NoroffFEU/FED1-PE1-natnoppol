@@ -7,7 +7,7 @@ window.addEventListener('load', async() =>{
     try{
         
         const res = await fetchAllPost(3)
-        console.log(res)
+    
         
         if(res.data.length > 0){
 
@@ -18,9 +18,10 @@ window.addEventListener('load', async() =>{
                     <div class="numbertext">${index + 1}/${res.data.length}</div>
                     <div class="carousel-body">
                     <p>${e.author.name}</p>
-                    <h1 class="overflow-con">${e.title}</h1>
+                    <h2 class="clamped-text">${e.title}</h2>
                     <p class="clamped-text">${e.body}</p>
                     </div>
+                    <a href="../post/index.html?id=${e.id}">
                     <img src="${e.media?.url || '../image/600x400.svg'}" style='filter: blur(5px);'></img>
                 </div>
 

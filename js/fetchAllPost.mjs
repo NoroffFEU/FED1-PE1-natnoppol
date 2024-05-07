@@ -46,7 +46,7 @@ async function loadPosts() {
                   </div>
                   <p>${e.author.name}</p>
                 </div>
-                <h1 class="overflow-con">${e.title}</h1>
+                <h2 class="clamped-text">${e.title}</h2>
                 <p class="clamped-text">${e.body}</p>
                 <p class="date-text">${formatDate(e.created)}</p>
                 <div class="blog-btn">
@@ -60,7 +60,6 @@ async function loadPosts() {
                 </div>
               </div>
             </div>
-  
             `
       );
       post.innerHTML = element.join("");

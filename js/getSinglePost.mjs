@@ -36,7 +36,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         </div>
         <p>${response.data.author.name}</p>
         </div>
-        <h1>${response.data.title}</h1>
+        <h2>${response.data.title}</h2>
         <br>
         <p>${response.data.body}</p>
         <br>

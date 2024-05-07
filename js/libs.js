@@ -107,4 +107,25 @@ function logout() {
   window.location.href='../index.html';
 }
 
+function displayPage(data, page, itemsPerPage){
+  const startIndex = (page - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage
+  const currentPageData = data.slice(startIndex, endIndex)
+
+  console.log("current page data:",currentPageData)
+
+}
+
+function displayPagination(totolPages){
+
+  console.log("how many pages", totolPages)
+
+  const pagination = document.getElementById('pagination')
+  pagination.innerHTML = `
+  <a href="">&laquo;</a>
+  <a href="">1</a>
+  <a href="">2</a>
+  <a href="">3</a>
+  <a href="">&raquo;</a>`
+}
 
