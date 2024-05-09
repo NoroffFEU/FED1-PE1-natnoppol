@@ -31,18 +31,68 @@ img {
   aspect-ratio: 16 / 9;
   object-fit: cover;
 }
-nav {
+main{
+  margin-top: 10rem;
+}
+/* navbar */
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 5rem;
+  background-color: rgb(49, 49, 49);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 1rem;
+  z-index: 99;
 }
-nav ul li {
-  margin-right: 1rem;
+.logo{
+  font-size: 2rem;
+  user-select: none;
 }
-nav ul li a {
-  padding: 1rem;
-  text-decoration: none;
+.navigation a{
+  position: relative;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 1rem;
+}
+.navigation a::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: transform;
+}
+.navigation .login-btn {
+  width: 5rem;
+  height: 2rem;
+  background: transparent;
+  border: 2px solid #fff;
+  outline: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 2rem;
+}
+
+.logout-btn {
+  width: 5rem;
+  height: 2rem;
+  background: transparent;
+  border: 2px solid #fff;
+  outline: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 1rem;
+  background-color: #ff1201;
+}
+.logout-btn:hover {
+  background-color: #970a00;
 }
 
 /* Carousel Images sliders*/
@@ -147,12 +197,6 @@ nav ul li a {
   display: flex;
   gap: 1rem;
 }
-.logout-btn {
-  background-color: #ff1201;
-}
-.logout-btn:hover {
-  background-color: #970a00;
-}
 button {
   padding: 0.5rem;
   background-color: #007bff;
@@ -235,16 +279,52 @@ textarea {
 /* pagination */
 
 .pagination{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 3rem;
   color: gray;
-  float: left;
-  padding: 1rem;
+  margin: auto;
   text-decoration: none;
   transition: background-color .3s;
+  width: 100%;
 }
 
 
 /* footer */
 
+.footer-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+}
+.socials{
+  display: flex;
+  gap: 1rem;
+}
+.policy{
+  display: flex;
+  gap: 5rem;
+}
+.socials li{
+  margin: 0 10px;
+}
+.socials a i{
+  font-size: 2rem;
+  transition: color .4s ease;
+}
+.socials a:hover i{
+  color: aqua;
+}
+.footer-bottom{
+  background: #000;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+}
 
 
 @media screen and (max-width: 768px) {
@@ -300,6 +380,11 @@ textarea {
   .carousel-body{
     height: auto;
     width: 5rem;
+  }
+  /* footer */
+  .policy{
+    flex-direction: column;
+    row-gap: 10px;
   }
 }
 
