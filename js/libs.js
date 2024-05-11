@@ -111,7 +111,7 @@ function displayPage(data, page, itemsPerPage){
   const startIndex = (page - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage
   const currentPageData = data.slice(startIndex, endIndex)
-
+  
   console.log("current page data:",currentPageData)
 
 }
@@ -128,5 +128,15 @@ function displayPagination(totolPages){
   <a href="">3</a>
   <a href="">&raquo;</a>
   `
+}
+
+function getURL(){
+  const params = new URLSearchParams (window.location.search)
+  let page = params.get('page')
+
+  if(page === null){
+    page=1
+  }
+  return page 
 }
 

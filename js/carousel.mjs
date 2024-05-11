@@ -6,8 +6,7 @@ window.addEventListener('load', async() =>{
     
     try{
         
-        const res = await fetchAllPost(3)
-    
+        const res = await fetchAllPost(3, 1)
         
         if(res.data.length > 0){
 

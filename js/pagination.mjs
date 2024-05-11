@@ -1,21 +1,31 @@
-window.addEventListener('load', async()=>{
-    const { fetchAllPost} = await import ("./fetchAllPost.mjs")
-    const itemsPerPage = 5;
-    let currentPage = 1;
-   
-    try{
-        const res = await fetchAllPost()
-        console.log(1,res)
+window.addEventListener("load", async () => {
+  const { fetchAllPost } = await import("./fetchAllPost.mjs");
 
-        if(res.data.length > 0){
-            const totalPages = Math.ceil(res.data.length / itemsPerPage);
+  try {
+    const get = getURL()
+    const res = await fetchAllPost(13, get);
 
-            displayPage(res.data, currentPage, itemsPerPage)
+    console.log("meta", res.meta);
 
-            displayPagination(totalPages)
-        }
+    if (res.data.length > 0) {
+     
+      let pageNumber = "";
+      for (let i = 0; i < res.meta.pageCount; i++) {
+        pageNumber += `<a href="./index.html?&page=${i + 1}">${
+          i + 1
+        }</a>`;
+      }
 
-    }catch(error){
-        console.log("Can not fetch", error)
+      const pagination = document.getElementById("pagination");
+      pagination.innerHTML = `
+            <a href="">&laquo;</a>
+
+            ${pageNumber}
+         
+            <a href="">&raquo;</a>
+            `;
     }
+  } catch (error) {
+    console.log("Can not fetch", error);
+  }
 });
