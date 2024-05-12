@@ -17,6 +17,7 @@ h1{
 body {
   line-height: 1.5;
   font-family: Arial, sans-serif;
+  background-color: #22223B;
 }
 a {
   text-decoration: none;
@@ -30,6 +31,13 @@ img {
   height: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
+  transition: 1s ease;
+}
+img:hover{
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+  transition: 1s ease;
 }
 main{
   margin-top: 10rem;
@@ -40,8 +48,8 @@ header{
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1rem 5rem;
-  background-color: rgb(49, 49, 49);
+  padding: 1rem 6rem;
+  background-color: #9A8C98;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,49 +59,67 @@ header{
   font-size: 2rem;
   user-select: none;
 }
+.navigation{
+  display: flex;
+  align-items: center;
+}
 .navigation a{
   position: relative;
   font-size: 1rem;
-  font-weight: 500;
-  margin-left: 1rem;
+  font-weight: 1000;
+  margin-left: .5rem;
 }
 .navigation a::after{
   content: '';
   position: absolute;
+  left: 0;
+  bottom: -6px;
   width: 100%;
   height: 3px;
   background-color: #fff;
   border-radius: 5px;
   transform: scaleX(0);
-  transition: transform;
+  transition: transform .5s;
+}
+.navigation a:hover::after{
+  transform-origin: left;
+  transform: scaleX(1);
 }
 .navigation .login-btn {
-  width: 5rem;
-  height: 2rem;
+  width: 7rem;
+  height: 3rem;
   background: transparent;
   border: 2px solid #fff;
   outline: none;
   border-radius: 6px;
   font-size: 1rem;
   font-weight: 500;
-  margin-left: 2rem;
+  margin-left: 1rem;
+  transition: .5s;
+}
+.login-btn:hover{
+  background-color: #fff;
+}
+.login-btn a{
+  color: black;
 }
 
 .logout-btn {
-  width: 5rem;
-  height: 2rem;
+  width: 6rem;
+  height: 3rem;
   background: transparent;
   border: 2px solid #fff;
   outline: none;
   border-radius: 6px;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 1000;
   margin-left: 1rem;
   background-color: #ff1201;
 }
 .logout-btn:hover {
   background-color: #970a00;
 }
+
 
 /* Carousel Images sliders*/
 .carousel-con{
@@ -105,6 +131,7 @@ header{
   margin: auto;
   max-width: 1500px;
   cursor: pointer;
+  color: #fff;
 }
 .image-slider{
   width: 100%;
@@ -112,7 +139,7 @@ header{
 }
 .image-slider img{
   max-width: 100%;
-  opacity: 0.2;
+  opacity: 0.3;
 }
 .mySlides {
   display: none;
@@ -126,6 +153,7 @@ header{
 .carousel-body{
   max-height: 10rem;
   max-width: 10rem;
+  font-weight: 900;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -183,12 +211,13 @@ header{
   height: 100%;
   width: 300px;
   margin: 1rem;
-  background-color: #3d3d3d;
+  background-color: #F2E9E4;
   border: 1px solid #fff;
   border-radius: 5px;
 }
 .blog-body {
   padding: 1rem;
+  font-weight: 500;
 }
 .blog-body-read-more{
   padding: 1rem;
@@ -300,10 +329,11 @@ textarea {
   flex-direction: column;
   text-align: center;
   gap: 1rem;
+  background-color: #9A8C98;
 }
 .socials{
   display: flex;
-  gap: 1rem;
+  margin-top: 2rem;
 }
 .policy{
   display: flex;
@@ -321,6 +351,7 @@ textarea {
 }
 .footer-bottom{
   background: #000;
+  color: #fff;
   padding: 20px 0;
   text-align: center;
   width: 100%;
