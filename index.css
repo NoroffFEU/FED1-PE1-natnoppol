@@ -173,13 +173,21 @@ header{
   margin: 0;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  top: auto;
-  width: auto;
-  position: absolute;
   cursor: pointer;
-  padding: 1rem;
-  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 1em;
+  font-weight: bold;
+  font-size: 1.2em;
+  transition: 0.3s ease;
+  border-radius: .5em;
   user-select: none;
+  background-color:rgba(204,204,204, 0.3);
+}
+.prev-btn:hover, .next-btn:hover{
+  box-shadow: 0 0 5px #fff;
+  border:1px solid #fff;
 }
 .next-btn{
   right: 3rem;
