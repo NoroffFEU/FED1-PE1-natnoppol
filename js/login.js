@@ -11,7 +11,7 @@ document
     };
 
  
-    let result; // 2.Response from server
+    let res; 
     
     try {
       const loginResponse = await fetch("https://v2.api.noroff.dev/auth/login", {
@@ -21,19 +21,20 @@ document
           "Content-type": "application/json",
         },
       });
-
+  
+      res = await loginResponse.json();
       if (loginResponse.ok) {
-        result = await loginResponse.json();
-
-        //4. redirect to index page, if HTTP 200
+        alert("You are logged in")
         window.location.href = '../post/edit.html'
-      } 
+      }else{
+        alert(res.errors[0].message)
+      }
     } catch (error) {
-      console.error("there was an errror with your fetch", error);
+      alert(res.errors[0].message);
     }
 
     // 3.Store accessTOken in LocalStorage 
-    localStorage.setItem('accessToken', result.data["accessToken"])
-    localStorage.setItem('name', result.data["name"])
+    localStorage.setItem('accessToken', res.data["accessToken"])
+    localStorage.setItem('name', res.data["name"])
     
   });

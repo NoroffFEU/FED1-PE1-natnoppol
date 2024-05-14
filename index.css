@@ -40,7 +40,13 @@ img:hover{
   transition: 1s ease;
 }
 main{
+  position: relative;
   margin-top: 10rem;
+  min-height: calc(100vh - 185px);
+}
+.page-content{
+  display: flex;
+  flex-direction: column;
 }
 /* navbar */
 header{
@@ -199,8 +205,7 @@ header{
 .active, .dot:hover {
   background-color: #717171;
 }
-
-/* ------------------------- */
+/* all post  */
 .blog-con {
   display: flex;
   flex-wrap: wrap;
@@ -219,9 +224,7 @@ header{
   padding: 1rem;
   font-weight: 500;
 }
-.blog-body-read-more{
-  padding: 1rem;
-}
+
 .blog-btn {
   display: flex;
   gap: 1rem;
@@ -290,20 +293,6 @@ textarea {
   object-fit: fill;
 }
 
-/* Post/index */
-
-.read-more-blog {
-  height: auto;
-  max-width: 90rem;
-  margin: 1rem;
-  background-color: #3d3d3d;
-  border: 1px solid #fff;
-  border-radius: 5px;
-}
-
-.read-more-con-img {
-  width: 100%;
-}
 
 /* pagination */
 
@@ -311,12 +300,20 @@ textarea {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  font-size: 3rem;
-  color: gray;
-  margin: auto;
+  font-size: 1rem;
+  margin: 1rem
+}
+.pagination a{
+  padding: 8px 16px;
   text-decoration: none;
   transition: background-color .3s;
-  width: 100%;
+  border: 2px solid #fff;
+}
+.pagination a.active{
+  background-color: #007bff;
+}
+.pagination a:hover:not(.active){
+  background-color: #ddd;
 }
 
 
@@ -356,10 +353,37 @@ textarea {
   text-align: center;
   width: 100%;
 }
+#footer{
+}
+
+/* Get single post & Read more */
+/* Post/index */
+.single-blog-con{
+  display: flex;
+  justify-content: center;
+}
+.read-more-blog {
+  height: auto;
+  max-width: 90rem;
+  margin: 1rem;
+  background-color: #3d3d3d;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+.read-more-con-img {
+  width: 100%;
+}
+.blog-body-read-more{
+  padding: 1rem;
+  word-wrap: break-word;
+}
 
 
 @media screen and (max-width: 768px) {
-  .blog-con {
+  .blog-con{
+    margin: 0.5rem;
+  }
+  .single-blog-con {
     margin: 0.5rem;
   }
   .blog {
@@ -373,26 +397,32 @@ textarea {
     height: auto;
     width: 45rem;
   }
-  .blog-body-read-more {
-    word-wrap: break-word;
-  }
 }
 
 @media screen and (max-width: 480px) {
+  main{
+    margin-top: 5rem;
+  }
+  .blog-con{
+    margin: 0rem;
+  }
+  .single-blog-con {
+    /* margin: 0rem; */
+  }
   .blog {
-    width: 400px;
+    width: 20rem;
     margin: 0.5rem auto;
   }
   .clamped-text {
     -webkit-line-clamp: 1;
   }
+  header{
+    padding: 0 0;
+  }
   /* Post/index */
   .read-more-blog{
     height: auto;
     width: 23rem;
-  }
-  .blog-body-read-more {
-    word-wrap: break-word;
   }
   /* Carousel Images sliders*/
   .next-btn{

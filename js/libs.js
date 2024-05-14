@@ -1,3 +1,6 @@
+let response;
+let res;
+
 async function editPost(id, inputValue) {
   try {
     const res = await fetch(
@@ -13,12 +16,15 @@ async function editPost(id, inputValue) {
         body: JSON.stringify(inputValue),
       }
     );
+     response = await res.json()
     if (res.ok) {
       alert("Your post has edited");
       window.location.href = "../index.html";
+    }else{
+      alert(response.errors[0].message)
     }
   } catch (error) {
-    console.log("Something went wrong", error);
+    alert(response.errors[0].message)
   }
 }
 
@@ -36,14 +42,16 @@ async function createPost(inputValue) {
       }
     );
 
+    res = await response.json()
+
     if (response.ok) {
       alert("Your content is postet");
       window.location.href = "../index.html";
     } else {
-      alert("Your post is not createt");
+      alert(res.errors[0].message)
     }
   } catch (error) {
-    console.log("something went wrong", error);
+    alert(res.errors[0].message)
   }
 }
 
@@ -104,6 +112,7 @@ function formatDate(date) {
 
 function logout() {
   localStorage.clear();
+  alert("You are now logged out")
   window.location.href='../index.html';
 }
 

@@ -13,6 +13,8 @@ document
       email: regisEmail,
       password: regisPassword,
     };
+    
+    let res;
     try {
       const response = await fetch("https://v2.api.noroff.dev/auth/register", {
         method: "POST",
@@ -22,14 +24,15 @@ document
         },
       });
 
+      res = await response.json()
+
       if (response.ok) {
-        const result = await response.json();
-        console.log(1, result);
+        alert("you are resgistered")
+        window.location.href="/account/login.html"
       } else {
-        console.error(2, response.statusText);
+        alert(res.errors[0].message)
       }
     } catch (error) {
-      console.error("there was an errror with your fetch", error);
+      alert(res.errors[0].message);
     }
-    console.log(regisData);
   });

@@ -2,27 +2,22 @@ window.addEventListener("load", async () => {
   const { fetchAllPost } = await import("./fetchAllPost.mjs");
 
   try {
-    const get = getURL()
-    const res = await fetchAllPost(13, get);
+    const get = getURL();
+    const res = await fetchAllPost(13, get,'desc','created');
 
-    console.log("meta", res.meta);
+    console.log("meta", res.data);
 
     if (res.data.length > 0) {
-     
       let pageNumber = "";
       for (let i = 0; i < res.meta.pageCount; i++) {
-        pageNumber += `<a href="./index.html?&page=${i + 1}">${
-          i + 1
-        }</a>`;
+        pageNumber += `<a href="./index.html?&page=${i + 1}" class="${
+          i + 1 == get ? 'active' : ''
+        }">${i + 1}</a>`;
       }
 
       const pagination = document.getElementById("pagination");
       pagination.innerHTML = `
-            <a href="">&laquo;</a>
-
             ${pageNumber}
-         
-            <a href="">&raquo;</a>
             `;
     }
   } catch (error) {

@@ -1,15 +1,13 @@
-async function fetchAllPost(limit=13,page=1) {
+async function fetchAllPost(limit=13,page=1,sortOrder='desc',sort='created') {
   try {
     let url = `https://v2.api.noroff.dev/blog/posts/${
       localStorage.getItem("name") || "test123123"
     }`;
     
     if(limit !== null){
-      url += `?limit=${limit}&page=${page}`
+      url += `?limit=${limit}&page=${page}&sortOrder=${sortOrder}&sort${sort}`
     }
     
-    console.log(url)
-
     const response = await fetch(url,
       {
         method: "GET",
@@ -34,10 +32,8 @@ async function loadPosts() {
   try {
     const post = document.getElementById("blogPost");
 
-    
     const get = getURL()
-    console.log(get)
-    const res = await fetchAllPost(13, get);
+    const res = await fetchAllPost(13, get,'desc','created');
     
 
     if (res.data.length > 0) {

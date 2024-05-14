@@ -1,10 +1,17 @@
 let id;
+let accessToken = localStorage.getItem("accessToken");
 
 window.addEventListener("load", async (e) => {
   e.preventDefault();
 
   const params = new URLSearchParams(window.location.search);
   id = params.get("id");
+
+  if(!accessToken){
+    alert("You are not logged in, please log in before create post")
+    window.location.href = "../account/login.html"
+  }
+
 
   if (id) {
     let { title, body, media } = await getPost(id);
@@ -15,7 +22,7 @@ window.addEventListener("load", async (e) => {
 
     inputTitleEl.value = title;
     inputBody.value = body;
-    inputURL.value = media.url;
+    inputURL.value = media? media.url:"";
   }
 
   if (id) {
