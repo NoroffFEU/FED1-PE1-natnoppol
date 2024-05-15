@@ -109,7 +109,6 @@ header{
 .login-btn a{
   color: black;
 }
-
 .logout-btn {
   width: 6rem;
   height: 3rem;
@@ -124,6 +123,81 @@ header{
 }
 .logout-btn:hover {
   background-color: #970a00;
+}
+/* log-in-page */
+.login-background{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('./image/login-background.avif');
+  background-size: cover;
+}
+.wrapper{
+  position: relative;
+  width: 35rem;
+  height: 40rem;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, .5);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.wrapper .form-box{
+  width: 100%;
+  padding: 3rem;
+}
+#loginForm, #registrationForm{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.input-box{
+  position: relative;
+  width: 100%;
+  height: 5rem;
+  border-bottom: 2px solid black;
+  margin: 1rem 0;
+}
+.input-box label{
+  position: absolute;
+  left: 3rem;
+  transform: translateX(-50%);
+  font-weight: 1000;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: .5s;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+  top: -2rem;
+}
+.input-box input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.input-box .icon{
+  position: absolute;
+  right: 1rem;
+  top: 2rem;
+  color: #000;
+}
+.remember-form-login input{
+  width: auto;
+}
+.form-btn{
+  width: 100%;
+  height: 3rem;
+  outline: none;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 900;
 }
 
 
@@ -361,8 +435,7 @@ textarea {
   text-align: center;
   width: 100%;
 }
-#footer{
-}
+
 
 /* Get single post & Read more */
 /* Post/index */
@@ -454,6 +527,15 @@ textarea {
   .policy{
     flex-direction: column;
     row-gap: 10px;
+  }
+
+  /* login & resgister */
+  .wrapper{
+    width: 20rem;
+    height: 35rem;
+  }
+  .wrapper .form-box{
+    padding: 1rem;
   }
 }
 
