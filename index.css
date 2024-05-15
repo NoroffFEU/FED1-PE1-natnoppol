@@ -65,6 +65,9 @@ header{
   font-size: 2rem;
   user-select: none;
 }
+.hamburger{
+  display: none;
+}
 .navigation{
   display: flex;
   align-items: center;
@@ -92,7 +95,7 @@ header{
   transform: scaleX(1);
 }
 .navigation .login-btn {
-  width: 7rem;
+  width: 6rem;
   height: 3rem;
   background: transparent;
   border: 2px solid #fff;
@@ -117,7 +120,7 @@ header{
   outline: none;
   border-radius: 6px;
   font-size: 1rem;
-  font-weight: 1000;
+  font-weight: 900;
   margin-left: 1rem;
   background-color: #ff1201;
 }
@@ -481,6 +484,47 @@ textarea {
 }
 
 @media screen and (max-width: 480px) {
+  /* nav */
+  .hamburger{
+    display: block;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 1rem;
+  }
+  .navigation{
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    transition: 0.5s;
+    overflow: hidden;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+  }
+  .navigation ul{
+    display: block;
+    width: fit-content; 
+    margin: 1rem;
+    text-align: center; 
+    transition: 0.5;
+  }
+  .navigation ul li{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .navigation.active{
+  height: 15rem;
+  }
+
+/* --------------- */
   main{
     margin-top: 5rem;
   }

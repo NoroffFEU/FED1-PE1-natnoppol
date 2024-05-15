@@ -149,3 +149,8 @@ function getURL(){
   return page 
 }
 
+function navResponsive(){
+  const navBar = document.querySelector(".navigation");
+    navBar.classList.toggle("active")
+    console.log("test")
+}
