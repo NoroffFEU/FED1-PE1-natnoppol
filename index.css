@@ -191,9 +191,10 @@ header{
   top: 2rem;
   color: #000;
 }
-.remember-form-login input{
+/* .remember-form-login input{
   width: auto;
-}
+  agree form 
+} */
 .form-btn{
   width: 100%;
   height: 3rem;
@@ -201,6 +202,22 @@ header{
   font-size: 1rem;
   color: #fff;
   font-weight: 900;
+}
+/* Create & Edit page */
+.form-card{ 
+  font-weight: 1000;
+  font-size: 1rem;
+}
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.scroll {
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 
@@ -324,30 +341,6 @@ button {
 button:hover {
   background-color: #0056b3;
 }
-input,
-textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-#postForm,
-#createPostForm {
-  max-width: 600px;
-  margin: 50px auto;
-  padding: 20px;
-  background-color: #585858;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.form-card {
-  margin-bottom: 20px;
-}
-.scroll {
-  overflow: scroll;
-  overflow-x: hidden;
-}
 .overflow-con {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -401,7 +394,6 @@ textarea {
   background-color: #ddd;
 }
 
-
 /* footer */
 
 .footer-content{
@@ -438,8 +430,6 @@ textarea {
   text-align: center;
   width: 100%;
 }
-
-
 /* Get single post & Read more */
 /* Post/index */
 .single-blog-con{
@@ -460,6 +450,28 @@ textarea {
 .blog-body-read-more{
   padding: 1rem;
   word-wrap: break-word;
+}
+/* Policy */
+.policy-container{
+display: flex;
+justify-content: center;
+width: 100%;
+}
+.privacy{
+  display: flex;
+  background-color: #F2E9E4;
+  width: 50rem;
+  padding: 1rem;
+  margin-bottom: 5rem;
+}
+.row{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+.row ul{
+  list-style: circle;
 }
 
 
@@ -572,7 +584,6 @@ textarea {
     flex-direction: column;
     row-gap: 10px;
   }
-
   /* login & resgister */
   .wrapper{
     width: 20rem;
@@ -580,6 +591,10 @@ textarea {
   }
   .wrapper .form-box{
     padding: 1rem;
+  }
+  /* policy */
+  .policy-container{
+    margin-top: 8.5rem;
   }
 }
 

@@ -9,7 +9,7 @@
   <script type="module" src="../js/postForm.mjs"></script>
   <script src="../js/libs.js"></script>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
   <link rel="stylesheet" href="/index.css" />
   <script
       src="https://kit.fontawesome.com/26b8dcee52.js"
@@ -35,54 +35,50 @@
       <button class="logout-btn" onclick="logout()">Log out</button>
     </nav>
   </header>
-
-  <div class="page-content">
-    <main>
-      <form id="postForm">
-        <div class="form-card">
-          <label for="text">Title</label>
-          <input id="title" type="text" for="title" placeholder="Your title here!"/>
-        </div>
-        <div class="form-card">
-          <label for="URL">Your URL</label>
-          <input id="mediaURL" type="url" for="url" placeholder="https://images.unsplash.com/photo..."/>
-        </div>
-        <div class="form-card">
-          <label for="tag">Your tag</label>
-          <option id="tag" value="" placeholder="">
-          <option id="tag" value="" placeholder="">
-          <option id="tag" value="" placeholder="">
-        </div>
-        <div class="form-card">
-          <label for="text">Message</label>
-          <textarea class="scroll" name="text" for="title" id="body" cols="30" rows="10" style="height: 100px"
-            placeholder="Type your text" ></textarea>
-        </div>
-        <button id="editPost" type="submit">Edit</button>
-        <button id="createPost" type="submit">Create</button>
-      </form>
-    </main>
   
-    <footer>
-      <div class="footer-content" id="footer">
-        <ul class="socials">
-          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-          <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-          <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-          <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-        </ul>
-        <ul class="policy">
-          <li><a href="../policy/privacy.html">Privacy & Policy</a></li>
-          <li><a href="../policy/term.html">Terms & Conditions</a></li>
-        </ul>
-        <div class="footer-bottom">
-          LOGO copyright ©2024 LOGO - All rights reserved || Designed By:
-          Natnoppol
-        </div>
+  <div class="login-background">
+    <div class="wrapper">
+      <div class="form-box login">
+        <form id="postForm">
+          <h1 style="text-align: center">Create & Edit</h1>
+          <div class="form-card">
+            <label for="text">Title</label>
+            <input id="title" type="text" for="title" placeholder="Your title here!"/>
+          </div>
+          <div class="form-card">
+            <label for="URL">Your URL</label>
+            <input id="mediaURL" type="url" for="url" placeholder="https://images.unsplash.com/photo..."/>
+          </div>
+          <div class="form-card">
+            <label for="text">Message</label>
+            <textarea class="scroll" name="text" for="title" id="body" cols="30" rows="10" style="height: 5rem"
+              placeholder="..." ></textarea>
+          </div>
+          <button id="editPost" type="submit">Edit</button>
+          <button id="createPost" type="submit">Create</button>
+        </form>
       </div>
-    </footer>
+    </div>
   </div>
+  <footer>
+    <div class="footer-content" id="footer">
+      <ul class="socials">
+        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+      </ul>
+      <ul class="policy">
+        <li><a href="../policy/privacy.html">Privacy & Policy</a></li>
+        <li><a href="../policy/term.html">Terms & Conditions</a></li>
+      </ul>
+      <div class="footer-bottom">
+        LOGO copyright ©2024 LOGO - All rights reserved || Designed By:
+        Natnoppol
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
