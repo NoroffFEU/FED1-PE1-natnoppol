@@ -27,12 +27,12 @@ window.addEventListener("DOMContentLoaded", async () => {
         blog.innerHTML = `
         <div class ="read-more-blog">
         <div class="read-more-con-img">
-        <img src="${response.data.media?.url || "../image/600x400.svg"}">
+        <img src="${response.data.media?.url || '../image/600x400.svg'}"alt="Blog img">
         </div>
         <div class="blog-body-read-more">
         <div class="banner-con">
         <div class="author-banner">
-        <img src="${response.data.author?.banner.url}">
+        <img src="${response.data.author?.banner.url}" alt="Banner img">
         </div>
         <p>${response.data.author.name}</p>
         </div>
@@ -44,7 +44,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         <p>${formatDate(response.data.updated)}</p>
         <br>
         <div class="blog-btn">
-        <button id='getURL'>Share link</button>
+        <button id='getURL' style="font-weight: 900; color:#fff;">Share link</button>
         </div>
         </div>
         </div>  

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <title>create&Edit</title>
 
   <script type="module" src="../js/postForm.mjs"></script>
   <script src="../js/libs.js"></script>
@@ -19,7 +19,9 @@
 
 <body>
   <header>
-    <h2 class="logo">LOGO</h2>
+    <div class="logo">
+      <img src="../image/logo.png" alt="Logo img">
+    </div>
     <div class="hamburger" onclick="navResponsive()">
       <i class="fa-solid fa-bars"></i>
     </div>
@@ -28,7 +30,7 @@
         <li>
           <a href="../index.html">Home</a>
           <a href="/post/edit.html">Create Post</a>
-
+          <a href="/about/index.html">About Us</a>
         </li>
       </ul>
       <button class="login-btn"><a href="../account/login.html">Log in</a></button>
@@ -54,8 +56,8 @@
             <textarea class="scroll" name="text" for="title" id="body" cols="30" rows="10" style="height: 5rem"
               placeholder="..." ></textarea>
           </div>
-          <button id="editPost" type="submit">Edit</button>
-          <button id="createPost" type="submit">Create</button>
+          <button id="editPost" type="submit" style="font-weight: 900; color:#fff;">Edit</button>
+          <button id="createPost" type="submit" style="font-weight: 900; color:#fff;">Create</button>
         </form>
       </div>
     </div>

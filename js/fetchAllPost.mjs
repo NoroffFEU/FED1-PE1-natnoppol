@@ -41,11 +41,11 @@ async function loadPosts() {
         (e) =>
           `
             <div class="blog">
-              <img src="${e.media?.url || '../image/600x400.svg'}">
+              <img src="${e.media?.url || '../image/600x400.svg'}" alt="Blog img">
               <div class="blog-body">
                 <div class="banner-con">
                   <div class="author-banner">
-                    <img src="${e.author?.banner.url}">
+                    <img src="${e.author?.banner.url}" alt="Banner img">
                   </div>
                   <p>${e.author.name}</p>
                 </div>
@@ -55,10 +55,10 @@ async function loadPosts() {
                 <div class="blog-btn">
                   ${
                     localStorage.getItem("accessToken")
-                      ? `<button><a href="../post/edit.html?id=${e.id}">Edit</a></button> 
-                  <button onclick="deletePost('${e.id}')">Delete</button>
-                  <button><a href="../post/index.html?id=${e.id}">Read more</a></button>`
-                      : `<button><a href="../post/index.html?id=${e.id}">Read more</a></button>`
+                      ? `<button><a href="../post/edit.html?id=${e.id}" style="font-weight: 900; color:#fff;" >Edit</a></button> 
+                  <button onclick="deletePost('${e.id}')" style="font-weight: 900; color:#fff;">Delete</button>
+                  <button><a href="../post/index.html?id=${e.id}"style="font-weight: 900; color:#fff;" >Read more</a></button>`
+                      : `<button><a href="../post/index.html?id=${e.id}"style="font-weight: 900; color:#fff;">Read more</a></button>`
                   }
                 </div>
               </div>
