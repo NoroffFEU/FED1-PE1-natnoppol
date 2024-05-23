@@ -79,7 +79,6 @@ async function getPost(id) {
 }
 
 async function deletePost(id) {
-  console.log(id);
   try {
     const res = await fetch(
       `https://v2.api.noroff.dev/blog/posts/${localStorage.getItem(
@@ -116,29 +115,6 @@ function logout() {
   window.location.href='../index.html';
 }
 
-function displayPage(data, page, itemsPerPage){
-  const startIndex = (page - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage
-  const currentPageData = data.slice(startIndex, endIndex)
-  
-  console.log("current page data:",currentPageData)
-
-}
-
-function displayPagination(totolPages){
-
-  console.log("how many pages", totolPages)
-
-  const pagination = document.getElementById('pagination')
-  pagination.innerHTML = `
-  <a href="">&laquo;</a>
-  <a href="">1</a>
-  <a href="">2</a>
-  <a href="">3</a>
-  <a href="">&raquo;</a>
-  `
-}
-
 function getURL(){
   const params = new URLSearchParams (window.location.search)
   let page = params.get('page')
@@ -152,5 +128,4 @@ function getURL(){
 function navResponsive(){
   const navBar = document.querySelector(".navigation");
     navBar.classList.toggle("active")
-    console.log("test")
 }

@@ -395,9 +395,7 @@ button:hover {
   object-fit: fill;
 }
 
-
 /* pagination */
-
 .pagination{
   display: flex;
   flex-wrap: wrap;
@@ -506,7 +504,6 @@ width: 100%;
   list-style: circle;
 }
 
-
 @media screen and (max-width: 768px) {
   .blog-con{
     margin: 0.5rem;
@@ -576,7 +573,6 @@ width: 100%;
   .navigation.active{
   height: 15rem;
   }
-
 /* --------------- */
   main{
     margin-top: 5rem;

@@ -5,8 +5,6 @@ window.addEventListener("load", async () => {
     const get = getURL();
     const res = await fetchAllPost(13, get,'desc','created');
 
-    console.log("meta", res.data);
-
     if (res.data.length > 0) {
       let pageNumber = "";
       for (let i = 0; i < res.meta.pageCount; i++) {
