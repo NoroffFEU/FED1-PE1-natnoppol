@@ -12,7 +12,6 @@ Password:`123456789`
 - [Demo]
 - ![banner img](https://github.com/natnoppol/JavaScript1/blob/main/Photo/4f0ac3e0-visual_studio_code.png)
 
-- 
 🟢 This website has 4 pages.
 
 - Home Page containing items list `/index.html`
