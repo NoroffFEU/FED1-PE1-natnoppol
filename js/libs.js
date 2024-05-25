@@ -129,3 +129,7 @@ function navResponsive(){
   const navBar = document.querySelector(".navigation");
     navBar.classList.toggle("active")
 }
+
+function hideLoading (){
+  document.getElementById('hideLoading').style.display = 'none';
+}

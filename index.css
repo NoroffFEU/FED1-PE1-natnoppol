@@ -503,6 +503,32 @@ width: 100%;
 .row ul{
   list-style: circle;
 }
+/* loading edicatior */
+.loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* -121 = top + bottom + element  */
+  height: calc(100vh - 121px);
+}
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid black;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  }
+  @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 
 
 @media screen and (max-width: 768px) {
   .blog-con{

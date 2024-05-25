@@ -67,4 +67,5 @@ window.addEventListener("DOMContentLoaded", async () => {
     alert("Copied the text: "+ currentURL)
     
   }
+  hideLoading()
 });

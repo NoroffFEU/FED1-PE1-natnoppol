@@ -72,4 +72,12 @@ async function loadPosts() {
   }
 }
 
-window.addEventListener("DOMContentLoaded", loadPosts);
+window.addEventListener("DOMContentLoaded", ()=>{
+  try{
+    loadPosts()
+    hideLoading ()
+  }
+  catch{
+    console.log("Something went error")
+  }
+});
