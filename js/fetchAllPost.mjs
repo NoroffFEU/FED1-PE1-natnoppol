@@ -41,7 +41,7 @@ async function loadPosts() {
         (e) =>
           `
             <div class="blog">
-              <img src="${e.media?.url || './image/600x400.svg'}" alt="Blog img">
+              <img src="${e.media?.url || '/image/600x400.svg'}" alt="Blog img">
               <div class="blog-body">
                 <div class="banner-con">
                   <div class="author-banner">
