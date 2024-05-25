@@ -2,6 +2,10 @@
 
 ## It is a program written by Javascript, HTML and CSS to receive commands and respond. Made by Natnoppol Pansantia, this project was created for learning Javascript, HTML and CSS.  💖 This website is for those who are new to using html css javascript to create a website.
 
+## Admin Login
+User: `natnoppol@stud.noroff.no`
+Password:`123456789`
+
 ## Table of Contents
 - [How to use](#How%20to%20use)
 - [Installation steps](#Installation%20steps)
