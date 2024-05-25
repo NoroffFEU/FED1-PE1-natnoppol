@@ -12,7 +12,7 @@ Password:`123456789`
 - [Demo](https://norofffeu.github.io/FED1-PE1-natnoppol/)
 - ![banner img](https://github.com/natnoppol/JavaScript1/blob/main/Photo/4f0ac3e0-visual_studio_code.png)
 
-🟢 This website has 4 pages.
+🟢 This website has 5 pages.
 
 - Home Page containing items list `/index.html`
 - Post Page showing all details of a specific item, create and edit `/post/index.html`  `/post/edit.html`
