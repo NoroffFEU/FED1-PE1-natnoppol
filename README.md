@@ -8,8 +8,8 @@ Password:`123456789`
 
 ## Table of Contents
 - [Figma](https://www.figma.com/design/EarMz0a8yDFw4Xfpzxi3GG/Game-App?node-id=1938-9423&t=SAukBV7t4eAhThz7-0)
-- [Installation steps](#Installation%20steps)
-- [How to use](#how-to-use)
+- [planing board](https://github.com/orgs/NoroffFEU/projects/46/views/1)
+- [Demo]
 - ![banner img](https://github.com/natnoppol/JavaScript1/blob/main/Photo/4f0ac3e0-visual_studio_code.png)
 
 - 
