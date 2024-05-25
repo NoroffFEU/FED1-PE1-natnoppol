@@ -20,8 +20,8 @@ window.addEventListener('load', async() =>{
                     <h2 class="clamped-text">${e.title}</h2>
                     <p class="clamped-text">${e.body}</p>
                     </div>
-                    <a href="../post/index.html?id=${e.id}">
-                    <img src="${e.media?.url || '../image/600x400.svg'}" style='filter: blur(5px);' alt="Blog img"></img>
+                    <a href="./post/index.html?id=${e.id}">
+                    <img src="${e.media?.url || './image/600x400.svg'}" style='filter: blur(5px);' alt="Blog img"></img>
                 </div>
 
                 `

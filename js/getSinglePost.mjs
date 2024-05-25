@@ -27,7 +27,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         blog.innerHTML = `
         <div class ="read-more-blog">
         <div class="read-more-con-img">
-        <img src="${response.data.media?.url || '../image/600x400.svg'}"alt="Blog img">
+        <img src="${response.data.media?.url || './image/600x400.svg'}"alt="Blog img">
         </div>
         <div class="blog-body-read-more">
         <div class="banner-con">

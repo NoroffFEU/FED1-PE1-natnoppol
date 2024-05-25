@@ -41,7 +41,7 @@ async function loadPosts() {
         (e) =>
           `
             <div class="blog">
-              <img src="${e.media?.url || '../image/600x400.svg'}" alt="Blog img">
+              <img src="${e.media?.url || './image/600x400.svg'}" alt="Blog img">
               <div class="blog-body">
                 <div class="banner-con">
                   <div class="author-banner">
@@ -57,8 +57,8 @@ async function loadPosts() {
                     localStorage.getItem("accessToken")
                       ? `<button><a href="../post/edit.html?id=${e.id}" style="font-weight: 900; color:#fff;" >Edit</a></button> 
                   <button onclick="deletePost('${e.id}')" style="font-weight: 900; color:#fff;">Delete</button>
-                  <button><a href="../post/index.html?id=${e.id}"style="font-weight: 900; color:#fff;" >Read more</a></button>`
-                      : `<button><a href="../post/index.html?id=${e.id}"style="font-weight: 900; color:#fff;">Read more</a></button>`
+                  <button><a href="./post/index.html?id=${e.id}"style="font-weight: 900; color:#fff;" >Read more</a></button>`
+                      : `<button><a href="./post/index.html?id=${e.id}"style="font-weight: 900; color:#fff;">Read more</a></button>`
                   }
                 </div>
               </div>
