@@ -18,7 +18,7 @@ window.addEventListener("DOMContentLoaded", async () => {
           },
         }
       );
-      
+
       if (res.ok) {
         const response = await res.json();
         
