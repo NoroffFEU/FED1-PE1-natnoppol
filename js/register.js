@@ -28,7 +28,7 @@ document
 
       if (response.ok) {
         alert("you are resgistered")
-        window.location.href="/account/login.html"
+        window.location.href="../account/login.html"
       } else {
         alert(res.errors[0].message)
       }
