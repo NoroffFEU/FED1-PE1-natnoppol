@@ -2,7 +2,7 @@ let currentIndex = 1
 
 window.addEventListener('load', async() =>{
 
-    const { fetchAllPost }  = await import ( "../fetchAllPost.mjs")
+    const { fetchAllPost }  = await import ( "./fetchAllPost.mjs")
     
     try{
         
