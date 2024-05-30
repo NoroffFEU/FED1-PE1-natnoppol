@@ -24,7 +24,7 @@ Password:`123456789`
 
 ```
 bash
-git clone https://github.com/natnoppol/JavaScript1.git
+git clone https://github.com/NoroffFEU/FED1-PE1-natnoppol.git
 
 ```
 
