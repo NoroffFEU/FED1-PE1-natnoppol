@@ -1,3 +1,4 @@
+![banner img](https://github.com/natnoppol/portfolio-webpage/blob/main/image/portfolio-logo.png)
 # Welcome to exam project 2024 (Frontend only)
 
 ## It is a program written by Javascript, HTML and CSS to receive commands and respond. Made by Natnoppol Pansantia, this project was created for learning Javascript, HTML and CSS.  💖 This website is for those who are new to using html css javascript to create a website.
@@ -10,7 +11,6 @@ Password:`123456789`
 - [Figma](https://www.figma.com/design/EarMz0a8yDFw4Xfpzxi3GG/Game-App?node-id=1938-9423&t=SAukBV7t4eAhThz7-0)
 - [planing board](https://github.com/orgs/NoroffFEU/projects/46/views/1)
 - [Demo](https://norofffeu.github.io/FED1-PE1-natnoppol/)
-- ![banner img](https://github.com/natnoppol/JavaScript1/blob/main/Photo/4f0ac3e0-visual_studio_code.png)
 
 🟢 This website has 5 pages.
 
